@@ -1,0 +1,45 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>Servlet.CurrenciesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/currencies</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/currencies/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ExchangeRatesServlet</servlet-name>
+        <servlet-class>Servlet.ExchangeRatesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExchangeRatesServlet</servlet-name>
+        <url-pattern>/exchangeRates</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExchangeRatesServlet</servlet-name>
+        <url-pattern>/exchangeRates/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExchangeRatesServlet</servlet-name>
+        <url-pattern>/exchange/*</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>ExceptionHandler</filter-name>
+        <filter-class>ExceptionHandler.ExceptionHandler</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ExceptionHandler</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
