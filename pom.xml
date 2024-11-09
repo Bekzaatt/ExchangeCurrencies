@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.example</groupId>
-  <artifactId>ChangingCurrencies</artifactId>
+  <artifactId>changingcurrencies</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>ChangingCurrencies Maven Webapp</name>
+  <name>changingcurrencies Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
     <repositories>
@@ -57,15 +57,31 @@
 
 
   </dependencies>
-  
+
   <build>
-    <finalName>ChangingCurrencies</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <outputDirectory>${project.build.directory}</outputDirectory>
+          <warName>changingcurrencies</warName>
+        </configuration>
+      </plugin>
+    </plugins>
+    <finalName>changingcurrencies</finalName>
   </build>
-  
+
+
+
   <properties>
     <maven.compiler.source>20</maven.compiler.source>
     <maven.compiler.target>20</maven.compiler.target>
   </properties>
-</project>
 
+
+
+
+</project>
 
