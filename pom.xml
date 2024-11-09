@@ -67,6 +67,7 @@
         <configuration>
           <outputDirectory>${project.build.directory}</outputDirectory>
           <warName>changingcurrencies</warName>
+          <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
         </configuration>
       </plugin>
     </plugins>
